@@ -329,7 +329,8 @@ aside {
   text-align: center;
   padding: 10px;
   background: white;
-  display: none; }
+  display: none;
+  box-shadow: 0 0 10px #808080; }
 
 .ewmCode li {
   float: left; }
@@ -351,5 +352,80 @@ aside {
 /*底部*/
 footer {
   width: 100%;
-  height: 100px;
-  background: yellow; }
+  height: 444px;
+  background: white; }
+  footer .footer-cont {
+    width: 1080px;
+    margin: 0 auto;
+    height: 100%; }
+
+.part-top {
+  height: 120px;
+  display: flex;
+  flex-direction: row;
+  border-bottom: 1px solid #cccccc; }
+  .part-top li {
+    flex: 1;
+    height: 100%;
+    text-indent: 135px;
+    line-height: 120px;
+    font-size: 16px;
+    color: #333333;
+    background-repeat: no-repeat;
+    background-position: 35px 23px; }
+  .part-top li:nth-child(1) {
+    background-image: url(../img/serve-make.png); }
+  .part-top li:nth-child(2) {
+    background-image: url(../img/serve-backage.png); }
+  .part-top li:nth-child(3) {
+    background-image: url(../img/serve-pay.png); }
+  .part-top li:nth-child(4) {
+    background-image: url(../img/serve-refund.png); }
+
+.part-center {
+  padding-top: 30px;
+  padding-bottom: 52px; }
+  .part-center dl {
+    float: left;
+    text-align: center;
+    padding: 0 58px;
+    height: 142px;
+    line-height: 28px;
+    font-size: 14px;
+    color: #808080; }
+  .part-center dt {
+    margin-bottom: 26px;
+    font-size: 18px;
+    color: #333333; }
+  .part-center dd a {
+    color: #808080; }
+    .part-center dd a:hover {
+      color: black; }
+  .part-center .biyaoApp {
+    padding-right: 130px;
+    background: url(../img/app.png) no-repeat 54px bottom;
+    background-size: 98px 98px;
+    border-right: 1px solid #cccccc; }
+
+.theApp {
+  position: relative; }
+  .theApp:hover .weixin {
+    display: inline-block; }
+
+.weixin {
+  position: absolute;
+  top: -35px;
+  left: 70px;
+  width: 98px;
+  height: 98px;
+  display: none;
+  box-shadow: 0 0 10px gray; }
+
+.part-bottom {
+  height: 105px;
+  text-align: center;
+  font-size: 12px;
+  line-height: 28px;
+  color: #808080; }
+  .part-bottom span {
+    margin: 0 13px; }

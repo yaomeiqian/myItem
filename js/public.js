@@ -115,7 +115,8 @@ $(function(){
 			goTop(barTop,200);
 		});
 
-
+	//footer
+	
 	
 
 });
