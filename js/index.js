@@ -20,8 +20,10 @@ $(function(){
 
 //	主要内容
 //	banner轮播图
-	let imgs=["img/banner01.jpg","img/banner02.jpg","img/banner03.jpg","img/banner04.jpg","img/banner05.jpg","img/banner06.jpg"];
-	 $(".banner-focus").FadeInOutSlider({
+	seajs.use("Slider",function(mySlider){
+		let imgs=["img/banner01.jpg","img/banner02.jpg","img/banner03.jpg","img/banner04.jpg","img/banner05.jpg","img/banner06.jpg"];
+		mySlider.Slider({
+					"$box":$(".banner-focus"),
    					"width" : 1080,
    					"height" : 360,		
    					//图片数组
@@ -45,14 +47,17 @@ $(function(){
    						"marginLeft":12,//li的margin-left
    						"isCircle": true
    					}
-   			});
+   			})
+	});
+
    			
 	//news-laobi（时间自动获取）
 	let	d=new Date();
 	$("#laobi-time").html(d.getFullYear()+"-"+(d.getMonth()+1)+"-"+d.getDate());
 	
 	//category-recommend01精选手风琴
-	$("#piano").piano({
+	seajs.use("Piano",function(myPiano){
+		myPiano.Piano({
 			domObj:$("#piano")[0],
 			width:"1080",
 			height:"280",
@@ -61,7 +66,7 @@ $(function(){
 			imgSpace:10,
 			bgColor:"white"
 		});
-
+	})
 
 
 });

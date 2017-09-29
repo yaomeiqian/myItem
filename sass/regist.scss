@@ -28,7 +28,7 @@
 
 //注册部分
 .regist-cont{
-    height:642px;
+    height:612px;
     background:#f9f9f9;
     padding-top:30px;
     padding-left: 433px;
@@ -37,9 +37,82 @@
     }
     h3{
         font-weight: 100;
-        text-indent:30px;
-        font-size: 16px;
-        height:70px;
-        line-height:70px;
+        font-size: 22px;
+        color:#523669;
+        padding-top:54px;
+      
+        span{
+            display: block;
+            float:left;
+            height:25px;
+            line-height:25px;
+        }
+        .reg-icon{
+            width:25px;
+            height:25px;
+            margin-right:5px;
+            background-image: url(../img/sprit_biyao.png);
+            background-position: 0px -520px;
+        }
+    }
+    p{
+        padding-top:20px;
+        position: relative;
+        .txt{
+            height:40px;
+            width:400px;
+            border:1px solid #e8e8e8;
+            outline: none;
+            text-indent: 20px;
+            color:#c8c8c8;
+            font-size:14px;
+        }
+        #checkMa{
+            width:240px;
+            float:left;
+        }
+        #getCheckMa{
+            width:140px;
+            border:none;
+            background: #724a88;
+            color:white;
+            line-height:42px;
+            font-size: 16px;
+            float:left;
+            margin-left:18px;
+        }
+        #agree{
+            display: inline-block;
+            width:15px;
+            height:15px;
+            margin-right:10px;
+            vertical-align: middle;
+            outline: none;
+            cursor: pointer;
+        }
+        .deal{
+            color:#07a6df;
+            margin-left:30px;
+            cursor: pointer;
+        }
+        #regBtn{
+            background: #f49f26;
+            color:white;
+            font-size: 20px;
+            height:50px;
+            cursor: pointer;
+        }
+        label{
+            cursor: pointer;
+        }
+        .errorMsg{
+            font-size:12px;
+            color:#f49f26;
+            padding-left:5px;
+        }
+    }
+    .bidu{
+        font-size: 12px;
+        color:#8a8a8a;
     }
 }

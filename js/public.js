@@ -110,10 +110,13 @@ $(function(){
 		});
 			
 	//滚动条缓慢回到顶部
-	$(".rightBar-top").click(function(){
+	seajs.use("goTop",function(mygoTop){
+		$(".rightBar-top").click(function(){
 			let barTop=$(document).scrollTop(); 
-			goTop(barTop,200);
+			mygoTop.goTop(barTop,200);
 		});
+	})
+	
 
 	//footer
 	
