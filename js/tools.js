@@ -9,6 +9,8 @@ jQuery.fn.extend({
 				this.height = obj.height;
 				this.ulPosition=obj.ulPosition;
 				this.imgHref=obj.imgHref;
+				this.leftBtn=obj.leftBtn;
+				this.rightBtn=obj.rightBtn;
 				
 				//图片数组
 				this.imgs = obj.imgs;
@@ -100,6 +102,32 @@ jQuery.fn.extend({
 				$(this.$box.selector+" ul li").click(function(){
 					that.goImg($(that.$box.selector+" ul li").index(this)+1);
 				});	
+				
+				this.leftBtn.click(function(){
+					$(that.$box).stop();
+					//1、数据处理
+					let currOutOrd = that.currOrd;
+					that.currOrd --;
+					if(that.currOrd<1){
+						that.currOrd=that.imgHref.length;
+					}
+					// //2、外观
+					that.showImg(currOutOrd,that.currOrd);
+				});
+				
+				this.rightBtn.click(function(){
+					$(that.$box).stop();
+					//1、数据处理
+					let currOutOrd = that.currOrd;
+					that.currOrd ++;
+					if(that.currOrd>that.imgHref.length){
+						that.currOrd=1;
+					}
+					
+					// //2、外观
+					that.showImg(currOutOrd,that.currOrd);
+				});
+				
 			}
 			
 			//启动定时器

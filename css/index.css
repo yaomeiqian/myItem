@@ -13,6 +13,32 @@
 	height:360px;
 	position:relative;
 }
+.banner-focus{
+	width:100%;
+	height:100%;
+	position:relative;
+	cursor: pointer;
+}
+.banner-focus span{
+	display:none;
+	position:absolute;
+	width:48px;
+	height:48px;
+	opacity: 0.9;
+	top:156px;
+	z-index: 10000;
+}
+.banner-focus:hover span{
+	display:block;
+}
+.toLeft{
+	background: url(../img/slider-left.png);
+	left:220px;
+}
+.toRight{
+	background: url(../img/slider-right.png);
+	right:20px;
+}
 .banner-list{
 	position: absolute;
 	top:0;

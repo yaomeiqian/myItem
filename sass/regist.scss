@@ -1,0 +1,45 @@
+@charset "utf-8";
+@import "public";
+
+//header部分
+.regist-header{
+    height:98px;
+    line-height:98px;
+    padding:0 30px;
+    .logo{
+        float:left;
+        width:231px;
+        height:50px;
+        margin-top:24px;
+        background:url(../img/logo.png);
+    }
+    p{
+        float:right;
+        font-size:12px;
+        color:#8c8292;
+        span{
+            padding:0 5px;
+        }
+        a{
+            color:#8c8292;
+        }
+    }
+}
+
+//注册部分
+.regist-cont{
+    height:642px;
+    background:#f9f9f9;
+    padding-top:30px;
+    padding-left: 433px;
+    form{
+        height:412px;
+    }
+    h3{
+        font-weight: 100;
+        text-indent:30px;
+        font-size: 16px;
+        height:70px;
+        line-height:70px;
+    }
+}

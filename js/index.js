@@ -33,6 +33,8 @@ $(function(){
    						"right":362,
    						"bottom":24
    					},
+   					"leftBtn":$(".toLeft"),
+   					"rightBtn":$(".toRight"),
    					"btnObj" : { //按钮的属性
    						"width":12,
    						"height":12,
