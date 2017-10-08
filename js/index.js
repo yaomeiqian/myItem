@@ -17,7 +17,7 @@ $(function(){
 		$("body").append("<script type='text/javascript' src='js/public.js'></script>");
 	}
 	htmlLoad();
-
+	
 //	主要内容
 //	banner轮播图
 	seajs.use("Slider",function(mySlider){

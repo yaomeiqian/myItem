@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>必要 - C2M电子商务平台扛旗者</title>
+	<link rel="stylesheet" type="text/css" href="css/login.css"/>
+</head>
+<body>
+	<!--header部分-->
+	<div class="login-header">
+		<a href="index.html" class="logo"></a>
+		<p>欢迎来到必要，请 <span>登录</span>|<span><a href="regist.html">注册</a></span></p>
+	</div>
+	<!--登录部分-->
+	<div class="login-cont">
+		<form action="">
+			<h3 class='clear'><span class="reg-icon"></span><span>用户登录</span></h3>
+			<ul>
+				<li>
+					<input type="text" placeholder="请输入手机号" id="telePhone" maxlength="11" />
+					<span id="telePhoneMsg" class="errorMsg"><!--请输入手机号--></span>
+				</li>
+				<li>
+					<input type="password" placeholder="请登录密码" id="userPass" maxlength="32"/>
+					<span id="userPassMsg" class="errorMsg"><!--请输入6-32位字符，需字母数字符号两种以上组合--></span>
+				</li>
+				<li class="deal">
+					<div id="autoLoginCheck" style="float:left;">
+						<input type="checkbox" id="autoLogin"/>
+						<label for="autoLogin" class="loginTit">下次自动登录</label>
+					</div>
+					<a href="">忘记密码</a>
+				</li>
+				<li id="lastErrorMsg"><!--请先获取验证码--></li>
+				<li class="LogLi">
+					<input type="button" id="LogBtn" value="登录"/>
+				</li>
+				<li id="elseLogin">
+					<span>使用第三方账号登录：</span>
+					<a href="" id="weixLogin"></a>
+					<a href="" id="qqLogin"></a>
+				</li>
+			</ul>
+		</form>
+	</div>
+	<!--底部-->
+	<div class="login-footer">
+		<!--引入公共HTML的footer-->
+	</div>
+</body>
+</html>
+<script type="text/javascript" src="js/jquery-1.8.3.min.js" ></script>
+<script type="text/javascript" src="js/sea.js" ></script>
+<script type="text/javascript" src="js/login.js" ></script>

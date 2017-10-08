@@ -35,6 +35,24 @@ header { width: 100%; background: #333; }
 
 .userLogin { margin-right: 24px; }
 
+.loginAndReg { display: block; }
+
+.userNameMsg:hover .userJianT { background: url(../img/comSprite.png) 0 -88px no-repeat; }
+
+.userNameMsg:hover #userMessageDiv { display: block; }
+
+.userNameMsg { display: none; position: relative; }
+
+.userNameMsg #userName { margin: 0 5px; }
+
+.userNameMsg .userJianT { display: inline-block; width: 9px; height: 4px; margin-left: 10px; vertical-align: middle; background: url(../img/comSprite.png) 0 -102px no-repeat; }
+
+.userNameMsg #userMessageDiv { display: none; position: absolute; box-shadow: 0px 0px 8px 5px #eee; left: -2px; top: 35px; width: 100px; }
+
+.userNameMsg #userMessageDiv li { width: 100%; clear: both; font-size: 14px; line-height: 30px; }
+
+.userNameMsg #userMessageDiv li a { color: black; display: block; text-align: center; }
+
 .userMsg, .shopMsg { width: 112px; }
 
 .userMsg .msgBg { display: inline-block; vertical-align: -0.5px; width: 16px; height: 13px; margin-right: 12px; background: url(../img/header_msg.jpg); }
@@ -176,7 +194,7 @@ footer .footer-cont { width: 1080px; margin: 0 auto; height: 100%; }
 
 .part-bottom span { margin: 0 13px; }
 
-.regist-header { height: 98px; line-height: 98px; padding: 0 30px; }
+.regist-header { height: 98px; line-height: 98px; padding: 0 32px; }
 
 .regist-header .logo { float: left; width: 231px; height: 50px; margin-top: 24px; background: url(../img/logo.png); }
 
@@ -186,32 +204,48 @@ footer .footer-cont { width: 1080px; margin: 0 auto; height: 100%; }
 
 .regist-header p a { color: #8c8292; }
 
-.regist-cont { height: 612px; background: #f9f9f9; padding-top: 30px; padding-left: 433px; }
+.regist-cont { background: #f9f9f9; height: 640px; }
 
-.regist-cont form { height: 412px; }
+.regist-cont form { width: 400px; margin: 0 auto; }
 
-.regist-cont h3 { font-weight: 100; font-size: 22px; color: #523669; padding-top: 54px; }
+.regist-cont form h3 { font-weight: normal; font-size: 20px; color: #523669; padding-top: 54px; }
 
-.regist-cont h3 span { display: block; float: left; height: 25px; line-height: 25px; }
+.regist-cont form h3 span { display: block; float: left; height: 25px; line-height: 25px; }
 
-.regist-cont h3 .reg-icon { width: 25px; height: 25px; margin-right: 5px; background-image: url(../img/sprit_biyao.png); background-position: 0px -520px; }
+.regist-cont form h3 .reg-icon { width: 25px; height: 25px; margin-right: 5px; background-image: url(../img/sprit_biyao.png); background-position: 0px -520px; }
 
-.regist-cont p { padding-top: 20px; position: relative; }
+.regist-cont form ul { position: relative; }
 
-.regist-cont p .txt { height: 40px; width: 400px; border: 1px solid #e8e8e8; outline: none; text-indent: 20px; color: #c8c8c8; font-size: 14px; }
+.regist-cont form ul li { height: 40px; margin-top: 20px; position: relative; }
 
-.regist-cont p #checkMa { width: 240px; float: left; }
+.regist-cont form ul li input { height: 38px; font-size: 14px; color: #999999; border: 1px solid #e8e8e8; text-indent: 20px; vertical-align: middle; outline: none; }
 
-.regist-cont p #getCheckMa { width: 140px; border: none; background: #724a88; color: white; line-height: 42px; font-size: 16px; float: left; margin-left: 18px; }
+.regist-cont form ul li #telePhone, .regist-cont form ul li #userPass, .regist-cont form ul li #userPassCheck { width: 400px; }
 
-.regist-cont p #agree { display: inline-block; width: 15px; height: 15px; margin-right: 10px; vertical-align: middle; outline: none; cursor: pointer; }
+.regist-cont form ul li #imgCheck { width: 200px; }
 
-.regist-cont p .deal { color: #07a6df; margin-left: 30px; cursor: pointer; }
+.regist-cont form ul .deal { margin-top: 10px; line-height: 40px; font-size: 12px; vertical-align: middle; }
 
-.regist-cont p #regBtn { background: #f49f26; color: white; font-size: 20px; height: 50px; cursor: pointer; }
+.regist-cont form ul .deal input { width: 13px; height: 13px; border: 1px solid #d5cdda; cursor: pointer; }
 
-.regist-cont p label { cursor: pointer; }
+.regist-cont form ul .deal label { margin-left: 10px; color: #8a8a8a; cursor: pointer; }
 
-.regist-cont p .errorMsg { font-size: 12px; color: #f49f26; padding-left: 5px; }
+.regist-cont form ul .deal span { margin-left: 10px; color: #07a6df; cursor: pointer; }
 
-.regist-cont .bidu { font-size: 12px; color: #8a8a8a; }
+.regist-cont form ul .regLi { height: 50px; }
+
+.regist-cont form ul .regLi #regBtn { width: 100%; height: 50px; background: #f49f26; font-size: 20px; color: white; cursor: pointer; }
+
+.imgCheckShow { display: inline-block; width: 100px; height: 40px; margin: 0 20px; background-size: 100%; vertical-align: middle; }
+
+.changImg { display: inline-block; color: #999; width: 36px; font-size: 12px; text-decoration: underline; vertical-align: middle; cursor: pointer; }
+
+#messageCheck { width: 240px; }
+
+#getMessageCheck { width: 140px; height: 40px; font-size: 16px; color: white; line-height: 40px; float: right; background: #724a88; cursor: pointer; }
+
+.errorMsg { position: absolute; top: 0px; width: 300px; right: -315px; left: 412px; height: 40px; line-height: 40px; font-size: 12px; color: #f49f26; vertical-align: middle; }
+
+#lastErrorMsg { font-size: 12px; color: #f49f26; margin-top: 0px; height: 12px; display: none; }
+
+#imgCheckLi { display: none; }

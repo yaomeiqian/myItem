@@ -2,7 +2,7 @@
 @import "public";
 
 //header部分
-.regist-header{
+.login-header{
     height:98px;
     line-height:98px;
     padding:0 32px;
@@ -26,8 +26,9 @@
     }
 }
 
+
 //注册部分
-.regist-cont{
+.login-cont{
     background:#f9f9f9;
     height:640px;
     form{
@@ -67,15 +68,12 @@
                 text-indent: 20px;
                 vertical-align: middle;
                 outline: none;
+                font-family:"Microsoft YaHei";
             }
-            #telePhone,#userPass,#userPassCheck{
+            #telePhone,#userPass{
                 width:400px;
             }
-            #imgCheck{
-                width:200px;
-            }
-            
-            
+           
         }
         .deal{
             margin-top:10px;
@@ -94,15 +92,15 @@
                 color:#8a8a8a;
                 cursor: pointer;
             }
-            span{
-                margin-left:10px;
+            a{
+                float:right;
                 color:#07a6df;
                 cursor: pointer;
                 }
         }
-        .regLi{
+        .LogLi{
             height:50px;
-            #regBtn{
+            #LogBtn{
                 width:100%;
                 height:50px;
                 background: #f49f26;
@@ -113,36 +111,7 @@
         }
     }
 }
-.imgCheckShow{
-    display: inline-block;
-    width:100px;
-    height:40px;
-    margin:0 20px;
-    background-size: 100%;
-    vertical-align: middle;
-}
-.changImg{
-    display: inline-block;
-    color:#999;
-    width:36px;
-    font-size:12px;
-    text-decoration: underline;
-    vertical-align: middle;
-    cursor: pointer;
-}
-#messageCheck{
-    width:240px;
-}
-#getMessageCheck{
-    width:140px;
-    height:40px;
-    font-size: 16px;
-    color:white;
-    line-height:40px;
-    float:right;
-    background: #724a88;
-    cursor: pointer;
-}
+
 .errorMsg{
     position: absolute;
     top:0px;
@@ -162,6 +131,27 @@
     height:12px;
     display: none;
 }
-#imgCheckLi{
-    display: none;
+
+#elseLogin{
+    margin-top:40px;
+    height:32px;
+    line-height:32px;
+    font-size:14px;
+    color:#666666;
+    text-align: center;
+    a{
+        display: inline-block;
+        width:100px;
+        height:32px;
+        border:1px solid #cbcbcb;
+        vertical-align: middle;
+    }
+    #weixLogin{
+        background: url(../img/weix.jpg);
+        margin-right:12px;
+    }
+    #qqLogin{
+        background: url(../img/qq.jpg);
+        
+    }
 }

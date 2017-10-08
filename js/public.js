@@ -1,5 +1,25 @@
 
 $(function(){
+	//头部，获取cookie（用户名）
+		seajs.use("cookieTools",function(myCookie){
+			var useName=myCookie.cookie.getCookie("userPhone");
+			isHasUserName(useName);
+			$("#exit").click(function(){
+				myCookie.cookie.removeCookie("userPhone");
+				window.location.unload();
+				isHasUserName(useName);
+			})
+		});
+	function isHasUserName(useName){
+		if(useName!=null){
+				$(".loginAndReg").css("display","none");
+				$(".userNameMsg").css("display","block");
+				$("#userName").html(useName);
+			}else{
+				$(".loginAndReg").css("display","block");
+				$(".userNameMsg").css("display","none");
+			}
+	}
 	//	nav导航栏
 	//导航栏搜索提示信息li
 	let searchArr=["面膜","拉杆箱","儿童玩具","精华","雨伞","收纳","西服","洗护","床品套件"];
@@ -110,13 +130,15 @@ $(function(){
 		});
 			
 	//滚动条缓慢回到顶部
-	seajs.use("goTop",function(mygoTop){
-		$(".rightBar-top").click(function(){
-			let barTop=$(document).scrollTop(); 
-			mygoTop.goTop(barTop,200);
-		});
-	})
-	
+//	seajs.use("goTop",function(mygoTop){
+//		$(".rightBar-top").click(function(){
+//			let barTop=$(document).scrollTop(); 
+//			mygoTop.goTop(barTop,200);
+//		});
+//	})
+	$(".rightBar-top").click(function(){
+		$("html,body").animate({scrollTop:0},800);
+	});
 
 	//footer
 	
