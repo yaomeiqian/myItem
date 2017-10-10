@@ -1,0 +1,141 @@
+@charset "utf-8";
+@import "public";
+
+
+body{
+    background: #f9f9f9;
+}
+//顶部栏
+.header_cont{
+    width:1200px;
+}
+
+//导航栏
+#shopcar-nav{
+    border-bottom: 1px solid #eae4e8;
+}
+.shopcar-nav-cont{
+    width:1200px;
+    height:98px;
+    margin:0 auto;
+}
+.steps-box{
+    width:560px;
+    float:right;
+    padding-top:26px;
+    li{
+        float:left;
+        width:140px;
+        text-align: center;
+        height:26px;
+        line-height:26px;
+        font-size: 12px;
+        color:#d5cdda;
+    }
+    li:first-child{
+        color:#724a88;
+    }
+}
+.step-icon{
+    height:20px;
+    background: url(../img/car_steps.png) -30px -23px no-repeat;
+}
+
+//主要部分
+#shopcar-content{
+    width:1200px;
+    min-height: 640px;
+    margin:0 auto;
+   
+}
+#shopcar-info{
+    font-size:12px;
+    color:#52346a;
+     h3{
+        height:46px;
+        line-height: 46px;
+        padding-top:20px;
+        font-size: 20px;
+        font-weight: normal;
+        text-indent: 10px;
+        border-bottom: 1px solid #d5cdda;
+    }
+}
+.common-info{
+    table{
+        width:1200px;
+        td{
+            height:37px;
+        }
+    }
+}
+.checkbox{
+    width:35px;
+    span{
+        display: block;
+        width:15px;
+        height:15px;
+        background: url(../img/commonSprite.png) -20px -80px no-repeat;
+    }
+}
+//根据店铺添加的商品
+.shoptit{
+    table{
+        width:1200px;
+        background: #eee;
+        color:#333333;
+        td{
+            height:37px;
+        }
+        td:last-child{
+            color:#666666;
+            text-align: left;
+        }
+    }
+}
+.goods-list-panel{
+    background: #fff;
+    tr{
+        height:120px;
+    }
+    td{
+        border-bottom: 1px dashed #ccc;
+        img{
+            display: block;
+        }
+        p{
+            line-height:28px;
+        }
+        li{
+            color:#999999;
+            line-height:20px;
+        }
+    }
+    .priceColor{
+        color:#f49f26;
+    }
+    .deleteGood{
+        color:#ccc;
+        font-size: 20px;
+        span{
+            cursor:pointer;
+        }
+    }
+}
+.changeGoodNum{
+    span{
+        float:left;
+        height:30px;
+        line-height:30px;
+        border:1px solid #ccc;
+        cursor: pointer;
+    }
+    .minusNum,.addNum{
+        width:27px;
+    }
+    .goodNum{
+        width:47px;
+        border-left:none;
+        border-right:none;
+    }
+}

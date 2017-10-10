@@ -194,54 +194,62 @@ footer .footer-cont { width: 1080px; margin: 0 auto; height: 100%; }
 
 .part-bottom span { margin: 0 13px; }
 
-.login-header { height: 98px; line-height: 98px; padding: 0 32px; }
+body { background: #f9f9f9; }
 
-.login-header .logo { float: left; width: 231px; height: 50px; margin-top: 24px; background: url(../img/logo.png); }
+.header_cont { width: 1200px; }
 
-.login-header p { float: right; font-size: 12px; color: #8c8292; }
+#shopcar-nav { border-bottom: 1px solid #eae4e8; }
 
-.login-header p span { padding: 0 5px; }
+.shopcar-nav-cont { width: 1200px; height: 98px; margin: 0 auto; }
 
-.login-header p a { color: #8c8292; }
+.steps-box { width: 560px; float: right; padding-top: 26px; }
 
-.login-cont { background: #f9f9f9; height: 640px; }
+.steps-box li { float: left; width: 140px; text-align: center; height: 26px; line-height: 26px; font-size: 12px; color: #d5cdda; }
 
-.login-cont form { width: 400px; margin: 0 auto; }
+.steps-box li:first-child { color: #724a88; }
 
-.login-cont form h3 { font-weight: normal; font-size: 20px; color: #523669; padding-top: 54px; }
+.step-icon { height: 20px; background: url(../img/car_steps.png) -30px -23px no-repeat; }
 
-.login-cont form h3 span { display: block; float: left; height: 25px; line-height: 25px; }
+#shopcar-content { width: 1200px; min-height: 640px; margin: 0 auto; }
 
-.login-cont form h3 .reg-icon { width: 25px; height: 25px; margin-right: 5px; background-image: url(../img/sprit_biyao.png); background-position: 0px -520px; }
+#shopcar-info { font-size: 12px; color: #52346a; }
 
-.login-cont form ul { position: relative; }
+#shopcar-info h3 { height: 46px; line-height: 46px; padding-top: 20px; font-size: 20px; font-weight: normal; text-indent: 10px; border-bottom: 1px solid #d5cdda; }
 
-.login-cont form ul li { height: 40px; margin-top: 20px; position: relative; }
+.common-info table { width: 1200px; }
 
-.login-cont form ul li input { height: 38px; font-size: 14px; color: #999999; border: 1px solid #e8e8e8; text-indent: 20px; vertical-align: middle; outline: none; font-family: "Microsoft YaHei"; }
+.common-info table td { height: 37px; }
 
-.login-cont form ul li #telePhone, .login-cont form ul li #userPass { width: 400px; }
+.checkbox { width: 35px; }
 
-.login-cont form ul .deal { margin-top: 10px; line-height: 40px; font-size: 12px; vertical-align: middle; }
+.checkbox span { display: block; width: 15px; height: 15px; background: url(../img/commonSprite.png) -20px -80px no-repeat; }
 
-.login-cont form ul .deal input { width: 13px; height: 13px; border: 1px solid #d5cdda; cursor: pointer; }
+.shoptit table { width: 1200px; background: #eee; color: #333333; }
 
-.login-cont form ul .deal label { margin-left: 10px; color: #8a8a8a; cursor: pointer; }
+.shoptit table td { height: 37px; }
 
-.login-cont form ul .deal a { float: right; color: #07a6df; cursor: pointer; }
+.shoptit table td:last-child { color: #666666; text-align: left; }
 
-.login-cont form ul .LogLi { height: 50px; }
+.goods-list-panel { background: #fff; }
 
-.login-cont form ul .LogLi #LogBtn { width: 100%; height: 50px; background: #f49f26; font-size: 20px; color: white; cursor: pointer; }
+.goods-list-panel tr { height: 120px; }
 
-.errorMsg { position: absolute; top: 0px; width: 300px; right: -315px; left: 412px; height: 40px; line-height: 40px; font-size: 12px; color: #f49f26; vertical-align: middle; }
+.goods-list-panel td { border-bottom: 1px dashed #ccc; }
 
-#lastErrorMsg { font-size: 12px; color: #f49f26; margin-top: 0px; height: 12px; display: none; }
+.goods-list-panel td img { display: block; }
 
-#elseLogin { margin-top: 40px; height: 32px; line-height: 32px; font-size: 14px; color: #666666; text-align: center; }
+.goods-list-panel td p { line-height: 28px; }
 
-#elseLogin a { display: inline-block; width: 100px; height: 32px; border: 1px solid #cbcbcb; vertical-align: middle; }
+.goods-list-panel td li { color: #999999; line-height: 20px; }
 
-#elseLogin #weixLogin { background: url(../img/weix.jpg); margin-right: 12px; }
+.goods-list-panel .priceColor { color: #f49f26; }
 
-#elseLogin #qqLogin { background: url(../img/qq.jpg); }
+.goods-list-panel .deleteGood { color: #ccc; font-size: 20px; }
+
+.goods-list-panel .deleteGood span { cursor: pointer; }
+
+.changeGoodNum span { float: left; height: 30px; line-height: 30px; border: 1px solid #ccc; cursor: pointer; }
+
+.changeGoodNum .minusNum, .changeGoodNum .addNum { width: 27px; }
+
+.changeGoodNum .goodNum { width: 47px; border-left: none; border-right: none; }

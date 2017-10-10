@@ -49,7 +49,28 @@ $(function(){
 			
 			//判断用户名和登录密码
 			if(isFormatOK){
-				
+				$.ajax({
+					type:"post",
+					url:"php/login.php",
+					async:true,
+					data:"userPhone="+$("#telePhone").val()+"&userPass="+$("#userPass").val(),
+					success:function(data){
+						if(data==1){
+							//保存cookie
+							seajs.use("cookieTools",function(myCookie){
+								myCookie.cookie.addCookie("userPhone",$("#telePhone").val(),7);
+								if(!$("#autoLogin")[0].checked){
+									setTimeout(function(){
+										myCookie.cookie.removeCookie("userPhone");
+									},60000);
+								}
+							});
+							window.location.href="index.html";
+						}else if(data==0){
+							$("#lastErrorMsg").html("用户名或密码错误").css("display","block");
+						}
+					}
+				});
 			}
 			
 		})
