@@ -13,11 +13,11 @@
 	</div>
 	<!--注册部分-->
 	<div class="regist-cont">
-		<form action="">
+		<form action="php/regSave.php" method="post" id="formReg">
 			<h3 class='clear'><span class="reg-icon"></span><span>新用户注册</span></h3>
 			<ul>
 				<li>
-					<input type="text" placeholder="请输入手机号" id="telePhone" maxlength="11" />
+					<input type="text" placeholder="请输入手机号" id="telePhone" name="userPhone" maxlength="11" />
 					<span id="telePhoneMsg" class="errorMsg"><!--请输入手机号--></span>
 				</li>
 				<li id="imgCheckLi">
@@ -32,7 +32,7 @@
 					<span id="messageCheckMsg"  class="errorMsg"><!--手机验证码格式错误--></span>
 				</li>
 				<li>
-					<input type="password" placeholder="请输入6-32位登录密码" id="userPass" maxlength="32"/>
+					<input type="password" placeholder="请输入6-32位登录密码" name="userPass" id="userPass" maxlength="32"/>
 					<span id="userPassMsg" class="errorMsg"><!--请输入6-32位字符，需字母数字符号两种以上组合--></span>
 				</li>
 				<li>

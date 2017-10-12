@@ -28,16 +28,28 @@ $(function(){
 	});
 	
 	//	主要部分
-	let goodsList=["goods-pic1.jpg","goods-pic2.jpg","goods-pic3.jpg","goods-pic4.jpg","goods-pic5.jpg"];
-	//整体设置商品列表图片#goods-list
-	$("#goods-list li").each(function(i){
-		$(this).css("backgroundImage","url(img/"+goodsList[i]+")");
-	}).click(function(){
-		//点击切换商品图片
-		$("#goodsPic").css("backgroundImage",$(this).css("backgroundImage"));
-		$(this).css("border","1px solid #523669").siblings().css("border","1px solid #cccccc");
-	});
+//	获取商品信息
+//	获取商品的goodsId
+	let hrefStr=location.href;
+	let hrefAarr=hrefStr.split("?");
+	let goodsId=hrefAarr[1].substring("goodsId=".length);
 	
+	let goodsList=["goods-pic1.jpg","goods-pic2.jpg","goods-pic3.jpg","goods-pic4.jpg","goods-pic5.jpg"];
+	$.get("php/getGoodsInfo.php",{"goodsId":goodsId},function(data){
+		
+		goodsList[0]=data.goodsImg.substring(4);
+		$("#goodsPic").css("backgroundImage","url("+data.goodsImg+")");
+		//整体设置商品列表图片#goods-list
+		$("#goods-list li").each(function(i){
+			$(this).css("backgroundImage","url(img/"+goodsList[i]+")");
+		}).click(function(){
+			//点击切换商品图片
+			$("#goodsPic").css("backgroundImage",$(this).css("backgroundImage"));
+			$(this).css("border","1px solid #523669").siblings().css("border","1px solid #cccccc");
+		});
+
+	},"json");
+
 	//添加放大镜
 	$("#goodsPic").mouseenter(function(){
 	 	$(this).bigMirror({
@@ -98,7 +110,7 @@ $(function(){
 			$(".sectionView-header").css({"position":"static","display":"block"});
 		}
 	});
-	
+	//选择规格，显示选中状态
 	$(".sectionView-focus li").click(function(){
 		$(this).css({"color":"#523669","background":"#fff"}).siblings().css({"color":"#000","background":"#eeecef"});
 		$(".sectionView-focus li i").css("display","none");
@@ -111,4 +123,21 @@ $(function(){
 		});
 	});
 	
+	//加入购物车
+	$(".addShopCar").click(function(){
+		//获取cookie（用户名）
+		let vipName="";
+		seajs.use("cookieTools",function(myCookie){
+			vipName=myCookie.cookie.getCookie("userPhone");
+		});
+		if(vipName==null){
+			window.location.href="login.html";
+		}else{
+			$.get("php/addShoppingCart.php",{"vipName":vipName,"goodsId":goodsId,"goodsCount":$(".goods-num").html()},function(data){
+				if(data=="1"){
+					window.open("shopcar.html");
+				}
+			});
+		}
+	});
 })

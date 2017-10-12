@@ -72,10 +72,12 @@ body{
 .checkbox{
     width:35px;
     span{
-        display: block;
+        display: inline-block;
         width:15px;
         height:15px;
         background: url(../img/commonSprite.png) -20px -80px no-repeat;
+//      background: url(../img/commonSprite.png) 0 -80px no-repeat;
+        
     }
 }
 //根据店铺添加的商品
@@ -137,5 +139,72 @@ body{
         width:47px;
         border-left:none;
         border-right:none;
+    }
+}
+
+//checkAll-panel全选，商品总数
+.checkAll-panel{
+    height:52px;
+    line-height:52px;
+    background: white;
+    border-bottom:1px solid #d5cdda;
+    a{
+        vertical-align: middle;
+        color:#26aee2;
+         margin:0 5px;
+    }
+    span:first-child{
+        margin:0 5px;
+    }
+    span{
+        vertical-align: middle;
+        b{
+            font-weight: normal;
+            color:#f49f26;
+            margin:0 5px;
+        }
+    }
+    .checkAll-panel-left{
+        float:left;
+    }
+    .checkAll-panel-right{
+        float:right;
+        span{
+            margin-right:30px;
+        }
+    }
+}
+
+//pay-panel结算
+.pay-panel{
+    height:50px;
+    line-height:50px;
+    background:#eeecef;
+    a{
+        display: inline-block;
+        padding:0 18px;
+        height:32px;
+        line-height:32px;
+        color:white;
+        background: #f49f26;
+    }
+    .goonShopping{
+        background: #724a88;
+        display: block;
+    }
+    .pay-panel-left{
+        float:left;
+        height:32px;
+        margin-top:9px;
+    }
+    .pay-panel-right{
+        float:right;
+        span{
+            margin-right:36px;
+        }
+        b{
+            font-weight: 100;
+            color:#f49f26;
+        }
     }
 }

@@ -47,7 +47,7 @@ header { width: 100%; background: #333; }
 
 .userNameMsg .userJianT { display: inline-block; width: 9px; height: 4px; margin-left: 10px; vertical-align: middle; background: url(../img/comSprite.png) 0 -102px no-repeat; }
 
-.userNameMsg #userMessageDiv { display: none; position: absolute; box-shadow: 0px 0px 8px 5px #eee; left: -2px; top: 35px; width: 100px; }
+.userNameMsg #userMessageDiv { display: none; position: absolute; box-shadow: 0px 0px 8px 5px #eee; left: -2px; top: 35px; width: 100px; background: white; }
 
 .userNameMsg #userMessageDiv li { width: 100%; clear: both; font-size: 14px; line-height: 30px; }
 
@@ -222,7 +222,7 @@ body { background: #f9f9f9; }
 
 .checkbox { width: 35px; }
 
-.checkbox span { display: block; width: 15px; height: 15px; background: url(../img/commonSprite.png) -20px -80px no-repeat; }
+.checkbox span { display: inline-block; width: 15px; height: 15px; background: url(../img/commonSprite.png) -20px -80px no-repeat; }
 
 .shoptit table { width: 1200px; background: #eee; color: #333333; }
 
@@ -253,3 +253,33 @@ body { background: #f9f9f9; }
 .changeGoodNum .minusNum, .changeGoodNum .addNum { width: 27px; }
 
 .changeGoodNum .goodNum { width: 47px; border-left: none; border-right: none; }
+
+.checkAll-panel { height: 52px; line-height: 52px; background: white; border-bottom: 1px solid #d5cdda; }
+
+.checkAll-panel a { vertical-align: middle; color: #26aee2; margin: 0 5px; }
+
+.checkAll-panel span:first-child { margin: 0 5px; }
+
+.checkAll-panel span { vertical-align: middle; }
+
+.checkAll-panel span b { font-weight: normal; color: #f49f26; margin: 0 5px; }
+
+.checkAll-panel .checkAll-panel-left { float: left; }
+
+.checkAll-panel .checkAll-panel-right { float: right; }
+
+.checkAll-panel .checkAll-panel-right span { margin-right: 30px; }
+
+.pay-panel { height: 50px; line-height: 50px; background: #eeecef; }
+
+.pay-panel a { display: inline-block; padding: 0 18px; height: 32px; line-height: 32px; color: white; background: #f49f26; }
+
+.pay-panel .goonShopping { background: #724a88; display: block; }
+
+.pay-panel .pay-panel-left { float: left; height: 32px; margin-top: 9px; }
+
+.pay-panel .pay-panel-right { float: right; }
+
+.pay-panel .pay-panel-right span { margin-right: 36px; }
+
+.pay-panel .pay-panel-right b { font-weight: 100; color: #f49f26; }

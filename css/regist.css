@@ -47,7 +47,7 @@ header { width: 100%; background: #333; }
 
 .userNameMsg .userJianT { display: inline-block; width: 9px; height: 4px; margin-left: 10px; vertical-align: middle; background: url(../img/comSprite.png) 0 -102px no-repeat; }
 
-.userNameMsg #userMessageDiv { display: none; position: absolute; box-shadow: 0px 0px 8px 5px #eee; left: -2px; top: 35px; width: 100px; }
+.userNameMsg #userMessageDiv { display: none; position: absolute; box-shadow: 0px 0px 8px 5px #eee; left: -2px; top: 35px; width: 100px; background: white; }
 
 .userNameMsg #userMessageDiv li { width: 100%; clear: both; font-size: 14px; line-height: 30px; }
 
@@ -238,7 +238,7 @@ footer .footer-cont { width: 1080px; margin: 0 auto; height: 100%; }
 
 .imgCheckShow { display: inline-block; width: 100px; height: 40px; margin: 0 20px; background-size: 100%; vertical-align: middle; }
 
-.changImg { display: inline-block; color: #999; width: 36px; font-size: 12px; text-decoration: underline; vertical-align: middle; cursor: pointer; }
+.changImg { display: inline-block; color: #999; width: 40px; font-size: 12px; text-decoration: underline; vertical-align: middle; cursor: pointer; }
 
 #messageCheck { width: 240px; }
 

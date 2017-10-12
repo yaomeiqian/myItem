@@ -59,31 +59,10 @@
 					</tr>
 				</table>
 			</div>
+			
 			<div class="goods-list-panel">
+				<!--动态创建-->
 				<table>
-					<tr align="center">
-						<td width="35" class="checkbox"><span></span></td>
-						<td width="135">
-							<a href=""><img src="img/goods-pic1.jpg" alt="" width="100" height="100"/></a>
-						</td>
-						<td width="602" align="left">
-							<a href="">
-								<p>羊绒系列</p>
-								<ul>
-									<li>颜色:<span>酒红色</span></li>
-									<li>尺寸:<span>S</span></li>
-								</ul>
-							</a>
-						</td>
-						<td width="135" class="priceColor">￥599</td>
-						<td width="106" class="changeGoodNum">
-							<span class="minusNum">-</span>
-							<span class="goodNum">1</span>
-							<span class="addNum">+</span>
-						</td>
-						<td width="125" class="priceColor">￥599</td>
-						<td width="62" class="deleteGood"><span>×</span></td>
-					</tr>
 					<tr align="center">
 						<td width="35" class="checkbox"><span></span></td>
 						<td width="135">
@@ -111,8 +90,29 @@
 			
 			</div>
 			
+			<!--checkAll-panel全选，商品总数-->
 			<div class="checkAll-panel">
-				<span></span>
+				<div class="checkAll-panel-left">
+					<span class="checkbox"><span></span></span>
+					<span>全选</span>
+					<a href="javascript:;">删除</a>
+				</div>
+				<div class="checkAll-panel-right">
+					<span>商品总数<b id="goods-nun">3</b></span>
+					<span>商品总价<b id="goods-priceSum">￥1198</b></span>
+				</div>
+			</div>
+			
+			<!--pay-panel结算-->
+			<div class="pay-panel">
+				<div class="pay-panel-left">
+					<a href="index.html" class="goonShopping">继续购物</a>
+				</div>
+				
+				<div class="pay-panel-right">
+					<span>合计：<b>￥1198</b></span>
+					<a href="javascript:;">结算</a>
+				</div>
 			</div>
 		</div>
 	</div>

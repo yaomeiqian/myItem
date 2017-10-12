@@ -292,7 +292,7 @@ $(function(){
 					if(isUserPassOk($("#userPass"))){
 						isUserPassCheckOK($("#userPassCheck"));
 						if(isUserPassCheckOK($("#userPassCheck"))){
-							if(checkMaClick){
+							if(!checkMaClick){
 								$("#lastErrorMsg").html("请先获取验证码").css("display","block");
 							}else{
 								isImgCheckOk($("#imgCheck"));
@@ -317,8 +317,15 @@ $(function(){
 							$("#lastErrorMsg").html("该手机号已注册过必要，请前往  <a href='#'>登录</a>").css("display","block");	
 						}else if(data=="1"){
 							//ajax访问后端，判断短信验证码
-							$.get("php/checkMsg.php",{userMsgCheck:$("#messageCheck").val()},function(data){
+							$.post("php/checkMsg.php",{
+								userMsgCheck:$("#messageCheck").val(),
+								userPhone:$("#telePhone").val(),
+								userPass:$("#userPass").val()
+								},function(data){
 								if(data=="1"){
+									
+//									$("#formReg").submit();
+									
 									if($("#agree")[0].checked){
 										//保存cookie
 										seajs.use("cookieTools",function(myCookie){
