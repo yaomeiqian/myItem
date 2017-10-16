@@ -71,6 +71,7 @@ body{
 }
 .checkbox{
     width:35px;
+    vertical-align: middle;
     span{
         display: inline-block;
         width:15px;
@@ -205,6 +206,150 @@ body{
         b{
             font-weight: 100;
             color:#f49f26;
+        }
+    }
+}
+
+//没有商品的默认显示
+#noGoodsBox{
+    div:first-child{
+//      padding-left:424px;
+        padding-left:500px;
+        padding-top:162px;
+        font-size:14px;
+        font-weight: bold;
+        img{
+           vertical-align: middle;
+           margin-right: 10px;
+        }
+        p{
+            display: inline-block;
+            vertical-align: middle;
+   
+        }
+    }
+    div:last-child{
+        a{
+            display: block;
+            width:120px;
+            height:40px;
+            line-height:40px;
+            text-align: center;
+            background: #724a88;
+            color:white;
+            font-size:16px;
+            margin:22px auto;
+        }
+    }
+}
+.unLoginTip{
+    display: none;
+}
+.loginTip{
+    display: inline-block;
+}
+
+
+//弹出层-收货信息
+.layer{
+    display: none;
+    position:fixed;
+    left:0;
+    top:0;
+    width:100%;
+    height:100%;
+    background: rgba(0,0,0,.5);
+    .layer-cont{
+        position: absolute;
+        width:750px;
+        height:352px;
+        left:235px;
+        top:162px;
+        background: white;
+        padding:0 20px;
+        .layer-cont-tit{
+            height:42px;
+            font-size:16px;
+            border:{
+                bottom:1px dashed #cccccc;
+            }
+            span{
+                float:left;
+                margin-top:12px;
+            }
+            .close{
+                float:right;
+                width:16px;
+                height:16px;
+                cursor:pointer;
+                background: url(../img/cls_btn.png);
+            }
+        }
+        .layer-cont-focus{
+              font-size:12px;
+              .txt{
+                  height:30px;
+                  width:208px;
+                  border:1px solid #ccc;
+                  text-indent: 5px;
+                  outline: none;
+              }
+              .addressDefault{
+                  height:30px;
+                  line-height:30px;
+                  font-size:14px;
+                  padding-left:165px;
+              }
+            a:last-child{
+                display: block;
+                width:120px;
+                height:28px;
+                line-height: 28px;
+                text-align: center;
+                background: #724a88;
+                color:white;
+                margin-left:164px;
+                border-radius: 3px;
+                margin-top: 45px;
+            }
+        }
+    }
+}
+.provinceAndCity{
+    
+}
+.province,.city{
+    width:120px;
+    height:30px;
+    line-height:30px;
+    text-indent: 5px;
+    margin-right:10px;
+    float:left;
+    position: relative;
+    cursor:pointer;
+    >div{
+        border:1px solid #ccc;
+        background: url(../img/select.jpg) right center no-repeat;
+    }
+    ul{
+        display: none;
+        position: absolute;
+        width:118px;
+        max-height:215px;
+        overflow: auto;
+        left:0;
+        top:32px;
+        border:1px solid #ccc;
+        border-top:none;
+        z-index: 10;
+        background: white;
+        li{
+            height:22px;
+            line-height:22px;
+            font-size: 12px;
+        }
+        li:hover{
+            background: #808080;
         }
     }
 }

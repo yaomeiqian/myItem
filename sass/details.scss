@@ -417,3 +417,50 @@
     padding-left:38px;
     display: none;
 }
+
+//弹出层-尺码表
+.layer{
+    display: none;
+    position:fixed;
+    left:0;
+    top:0;
+    width:100%;
+    height:100%;
+    background: rgba(0,0,0,.5);
+    .layer-cont{
+        position: absolute;
+        width:602px;
+        height:386px;
+        left:275px;
+        top:141px;
+        background: white;
+        padding:0 20px;
+        div:first-child{
+            height:42px;
+            font-size:16px;
+            border:{
+                bottom:1px dashed #cccccc;
+            }
+            span{
+                float:left;
+                margin-top:12px;
+            }
+            .close{
+                float:right;
+                width:16px;
+                height:16px;
+                cursor:pointer;
+                background: url(../img/cls_btn.png);
+            }
+        }
+        div:last-child{
+            img{
+                width:534px;
+                height:282px;
+                display: block;
+                margin: 25px auto;
+                
+            }
+        }
+    }
+}

@@ -32,6 +32,20 @@
 <!--主要部分-->
 <div id="shopcar-content">
 	
+	<!--没有商品的默认显示-->
+	<div id="noGoodsBox">
+		<div>
+			<img src="img/shoppingcart.png" alt="" />
+			<p>
+				<span class='unLoginTip'>您的购物车还是空的，<a href="login.html">登录</a>后，将显示您之前加入的商品。</span>
+				<span class='loginTip'>您的购物车还是空的</span>
+			</p>
+		</div>
+		<div>
+			<a href="index.html">马上购物</a>
+		</div>
+	</div>
+	
 	<!--shopcar-info购物车有商品时-->
 	<div id="shopcar-info">
 		<h3>购物车</h3>
@@ -63,7 +77,7 @@
 			<div class="goods-list-panel">
 				<!--动态创建-->
 				<table>
-					<tr align="center">
+					<!--<tr align="center">
 						<td width="35" class="checkbox"><span></span></td>
 						<td width="135">
 							<a href=""><img src="img/goods-pic1.jpg" alt="" width="100" height="100"/></a>
@@ -85,7 +99,7 @@
 						</td>
 						<td width="125" class="priceColor">￥599</td>
 						<td width="62" class="deleteGood"><span>×</span></td>
-					</tr>
+					</tr>-->
 				</table>
 			
 			</div>
@@ -95,7 +109,7 @@
 				<div class="checkAll-panel-left">
 					<span class="checkbox"><span></span></span>
 					<span>全选</span>
-					<a href="javascript:;">删除</a>
+					<a href="javascript:;" class="deleteAllGoods">删除</a>
 				</div>
 				<div class="checkAll-panel-right">
 					<span>商品总数<b id="goods-nun">3</b></span>
@@ -108,16 +122,70 @@
 				<div class="pay-panel-left">
 					<a href="index.html" class="goonShopping">继续购物</a>
 				</div>
-				
 				<div class="pay-panel-right">
-					<span>合计：<b>￥1198</b></span>
-					<a href="javascript:;">结算</a>
+					<span>合计：<b id="priceAll">￥1198</b></span>
+					<a href="javascript:;" id="pay">结算</a>
 				</div>
 			</div>
 		</div>
 	</div>
 </div>
 
+<!--弹出层-结算（填写收货信息）-->
+<div class="layer">
+	<div class='layer-cont'>
+		<div class="layer-cont-tit">
+			<span>请输入新地址</span>
+			<span class="close"></span>
+		</div>
+		<div class="layer-cont-focus">
+			<table width="100%" cellspacing="10">
+				<tr>
+					<td width="20%" align="right">收货人姓名: </td>
+					<td width="80%">
+						<input type="text" class="txt"/>
+					</td>
+				</tr>
+				<tr height="32">
+					<td width="20%" align="right">省市: </td>
+					<td width="80%" class="provinceAndCity">
+						<div class="province">
+							<div>--请选择--</div>
+							<ul>
+								<li>--请选择--</li>
+								<!--<li>北京</li>-->
+							</ul>
+						</div>
+						<div class="city">
+							<div>--请选择--</div>
+							<ul>
+								<li>--请选择--</li>
+								<!--<li>北京</li>-->
+							</ul>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td width="20%" align="right">街道地址: </td>
+					<td width="80%">
+						<input type="text" class="txt"/>
+					</td>
+				</tr>
+				<tr>
+					<td width="20%" align="right">手机号码: </td>
+					<td width="80%">
+						<input type="text" class="txt"/>
+					</td>
+				</tr>
+			</table>
+			<div class="addressDefault">
+				<span class="checkbox"><span></span></span>
+				设为默认地址
+			</div>
+			<a href="javascript:;">寄到该地址</a>
+		</div>
+	</div>
+</div>
 
 <!--底部-->
 <div id="shopcar-footer">

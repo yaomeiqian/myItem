@@ -140,4 +140,54 @@ $(function(){
 			});
 		}
 	});
+	
+	//弹出尺码表
+	$(".size-form").click(function(){
+		$(".layer").css({"display":"block"});
+		$(".layer-cont").css({"left":"275px","top":"141px"});
+	});
+	
+	$(".close").mousedown(function(event){
+		$(".layer").css("display","none");
+		let evt=event||window.event;
+		myPreventDefault(evt);
+	});
+	
+	//尺码表拖拽功能
+	let isDown=false;
+	let offsetX,offsetY;
+	$(".layer-cont-tit").mousedown(function(event){
+		isDown=true;
+		let evt=event||window.event;
+		offsetX=evt.offsetX;
+		offsetY=evt.offsetY;
+		myPreventDefault(evt);
+	});
+	$(document).mousemove(function(event){
+		let evt=event||window.event;
+		if(isDown){
+			$(".layer-cont").css({
+				"left":evt.pageX-$(this).scrollLeft()-offsetX,
+				"top":evt.pageY-$(this).scrollTop()-offsetY
+			});
+		}
+	});
+	$(document).mouseup(function(){
+		isDown=false;
+	});
 })
+
+function myPreventDefault(evt){
+	if(evt.preventDefault){
+		evt.preventDefault();
+	}else{
+		evt.returnValue=false;
+	}
+}
+function stopBubble(evt){
+	if(evt.stopPropagation){
+		evt.stopPropagation();
+	}else{
+		evt.cancleBubble=false;
+	}
+}

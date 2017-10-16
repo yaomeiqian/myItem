@@ -2,6 +2,8 @@
 /*公共样式*/
 html, body, div, p, dl, dt, dd, ul, ol, li, form, table, tr, td, th, h1, h2, h3, h4, h5, h6, hr, figure, fieldset, legend, img, input, header, footer, nav, aside, article, section { margin: 0; padding: 0; }
 
+html, body { height: 100%; }
+
 body { font-family: "微软雅黑",Arial; }
 
 a { text-decoration: none; }
@@ -220,7 +222,7 @@ body { background: #f9f9f9; }
 
 .common-info table td { height: 37px; }
 
-.checkbox { width: 35px; }
+.checkbox { width: 35px; vertical-align: middle; }
 
 .checkbox span { display: inline-block; width: 15px; height: 15px; background: url(../img/commonSprite.png) -20px -80px no-repeat; }
 
@@ -283,3 +285,43 @@ body { background: #f9f9f9; }
 .pay-panel .pay-panel-right span { margin-right: 36px; }
 
 .pay-panel .pay-panel-right b { font-weight: 100; color: #f49f26; }
+
+#noGoodsBox div:first-child { padding-left: 500px; padding-top: 162px; font-size: 14px; font-weight: bold; }
+
+#noGoodsBox div:first-child img { vertical-align: middle; margin-right: 10px; }
+
+#noGoodsBox div:first-child p { display: inline-block; vertical-align: middle; }
+
+#noGoodsBox div:last-child a { display: block; width: 120px; height: 40px; line-height: 40px; text-align: center; background: #724a88; color: white; font-size: 16px; margin: 22px auto; }
+
+.unLoginTip { display: none; }
+
+.loginTip { display: inline-block; }
+
+.layer { display: none; position: fixed; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.5); }
+
+.layer .layer-cont { position: absolute; width: 750px; height: 352px; left: 235px; top: 162px; background: white; padding: 0 20px; }
+
+.layer .layer-cont .layer-cont-tit { height: 42px; font-size: 16px; border-bottom: 1px dashed #cccccc; }
+
+.layer .layer-cont .layer-cont-tit span { float: left; margin-top: 12px; }
+
+.layer .layer-cont .layer-cont-tit .close { float: right; width: 16px; height: 16px; cursor: pointer; background: url(../img/cls_btn.png); }
+
+.layer .layer-cont .layer-cont-focus { font-size: 12px; }
+
+.layer .layer-cont .layer-cont-focus .txt { height: 30px; width: 208px; border: 1px solid #ccc; text-indent: 5px; outline: none; }
+
+.layer .layer-cont .layer-cont-focus .addressDefault { height: 30px; line-height: 30px; font-size: 14px; padding-left: 165px; }
+
+.layer .layer-cont .layer-cont-focus a:last-child { display: block; width: 120px; height: 28px; line-height: 28px; text-align: center; background: #724a88; color: white; margin-left: 164px; border-radius: 3px; margin-top: 45px; }
+
+.province, .city { width: 120px; height: 30px; line-height: 30px; text-indent: 5px; margin-right: 10px; float: left; position: relative; cursor: pointer; }
+
+.province > div, .city > div { border: 1px solid #ccc; background: url(../img/select.jpg) right center no-repeat; }
+
+.province ul, .city ul { display: none; position: absolute; width: 118px; max-height: 215px; overflow: auto; left: 0; top: 32px; border: 1px solid #ccc; border-top: none; z-index: 10; background: white; }
+
+.province ul li, .city ul li { height: 22px; line-height: 22px; font-size: 12px; }
+
+.province ul li:hover, .city ul li:hover { background: #808080; }
